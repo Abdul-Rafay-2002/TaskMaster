@@ -4,8 +4,7 @@ import { GoSignOut } from 'react-icons/go';
 import { useAuth } from '../firebase/auth';
 import { useRouter } from 'next/router';
 import Loading from '@/components/Loading';
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
+import React, { useEffect, useState } from 'react';
 import {
 	collection,
 	addDoc,
@@ -17,6 +16,7 @@ import {
 	doc,
 } from 'firebase/firestore';
 import { db } from '../firebase/firebase';
+import Image from 'next/image';
 
 export default function Home() {
 	const router = useRouter();
@@ -116,7 +116,7 @@ export default function Home() {
 				<div className='bg-white -m-6 p-3 sticky top-0'>
 					<div className='flex justify-center flex-col items-center'>
 						<a href='/' className='w-[150px] mb-5'>
-							<img src='/logo.png' alt='logo' />
+							<Image src='/logo.png' alt='logo' />
 						</a>
 						<h1 className='text-3xl md:text-7xl font-black'>TASK MASTER</h1>
 					</div>

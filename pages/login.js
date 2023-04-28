@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { useAuth } from '../firebase/auth';
 import { auth } from '@/firebase/firebase';
