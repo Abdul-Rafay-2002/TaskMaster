@@ -24,7 +24,7 @@ const RegisterForm = () => {
         if (!isLoading && authUser) {
             router.push("/");
         }
-    }, [authUser, isLoading]);
+    }, [authUser, isLoading, router]);
 
     //Created Google Provider Instance
     const provider = new GoogleAuthProvider();

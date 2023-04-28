@@ -22,7 +22,7 @@ const LoginForm = () => {
 		if (!isLoading && authUser) {
 			router.push("/");
 		}
-	}, [authUser, isLoading]);
+	}, [authUser, isLoading, router]);
 
 	//Login Button Handler Functionality
 	const loginHandler = async () => {
