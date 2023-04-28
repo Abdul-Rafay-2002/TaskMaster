@@ -116,8 +116,8 @@ export default function Home() {
 			<div className='max-w-3xl mx-auto mt-5 p-8'>
 				<div className='bg-white -m-6 p-3 sticky top-0'>
 					<div className='flex justify-center flex-col items-center'>
-						<Link href='/' className='w-[150px] mb-5'>
-							<Image src='/logo.png' alt='logo' />
+						<Link href='/' className='max-w-[150px] mb-5'>
+							<Image src='/logo.png' alt='logo' width={140} height={140}/>
 						</Link>
 						<h1 className='text-3xl md:text-7xl font-black'>TASK MASTER</h1>
 					</div>
