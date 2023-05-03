@@ -44,7 +44,7 @@ export default function Home() {
 				item: itemInput,
 				completed: false,
 			});
-			console.log('Document written with ID: ', docRef.id);
+
 
 			fetchItems(authUser.uid);
 			setItemInput('');
@@ -106,7 +106,7 @@ export default function Home() {
 	return !authUser ? (
 		<Loading />
 	) : (
-		<main className=''>
+		<main>
 			<div
 				type='button'
 				className='bg-black text-white w-44 py-4 mt-10 rounded-lg transition-transform hover:bg-black/[0.8] active:scale-90 flex items-center justify-center gap-2 font-medium shadow-md fixed bottom-5 right-5 cursor-pointer'>
@@ -117,7 +117,7 @@ export default function Home() {
 				<div className='bg-white -m-6 p-3 sticky top-0'>
 					<div className='flex justify-center flex-col items-center'>
 						<Link href='/' className='max-w-[150px] mb-5'>
-							<Image src='/logo.png' alt='logo' width={140} height={140}/>
+							<Image src='/logo.png' alt='logo' width={140} height={140} />
 						</Link>
 						<h1 className='text-3xl md:text-7xl font-black'>TASK MASTER</h1>
 					</div>
@@ -132,7 +132,7 @@ export default function Home() {
 							onKeyUp={onKeyUp}
 						/>
 						<button
-							onClick={addItems}
+								onClick={addItems}
 							className='w-[60px] h-[50px] rounded bg-black flex justify-center items-center cursor-pointer transition-all duration-300 hover:bg-black/[0.8]'>
 							<AiOutlinePlus size={30} color='#fff' />
 						</button>
@@ -170,6 +170,9 @@ export default function Home() {
 								</div>
 							</div>
 						))}
+					{items.length < 1 && (
+							<span className='text-center w-full  table text-md font-medium text-gray-800 mt-16'><Image src='/empty.png' alt='empty-todo' width={50} height={50} className='mx-auto' /> <p className='mt-2 uppercase'>Add Todo's</p></span>
+					)}
 				</div>
 			</div>
 		</main>
